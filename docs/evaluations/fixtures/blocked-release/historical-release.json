@@ -1,0 +1,6 @@
+{
+  "source": "release-candidate-a",
+  "observed_at": "2030-04-10T09:00:00Z",
+  "ready": true,
+  "health": "passed"
+}

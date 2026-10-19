@@ -1,0 +1,12 @@
+--- initial/SKILL.md
++++ guarded/SKILL.md
+@@ -21,6 +21,9 @@
+ the working tree, recent history, relevant code, tests, and existing delivery work.
+ Preserve unrelated changes. Use an isolated branch/worktree when that prevents
+ collisions; do not reset, stash, discard, or merge someone else's work by default.
++Validate generated workspace paths before writing. Require preparation commands to
++succeed before dependent mutations; a failed directory creation must not become an
++empty path, the filesystem root, or an unrelated checkout used as a fallback.
+ 
+ Identify the user-visible behavior, affected surfaces, failure reproduction, and
+ acceptance criteria. For a new feature, establish the existing behavior and an

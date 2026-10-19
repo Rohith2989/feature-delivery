@@ -1,0 +1,43 @@
+{
+  "evidence_type": "local_fixture_reconciliation_only",
+  "simulated_clock": "2030-04-12T10:01:00Z",
+  "operation_id": "enrich-example-17",
+  "provider_request_id": "provider-example-62",
+  "original_idempotency_key": "enrich-example-17-attempt-1",
+  "observed_provider_acceptance_at": "2030-04-12T10:00:01Z",
+  "seconds_since_acceptance_at_simulated_clock": 59,
+  "nominal_idempotency_retention_boundary_if_measured_from_acceptance": "2030-04-12T11:00:01Z",
+  "provider_result": "unknown",
+  "provider_charge_micro_usd": null,
+  "recovery_state": "blocked_pending_original_provider_status",
+  "currency": "USD",
+  "operation_limit_micro_usd": 2000000,
+  "settled_micro_usd": 300000,
+  "reserved_micro_usd_preserved": 1600000,
+  "settled_plus_reserved_micro_usd": 1900000,
+  "unreserved_budget_micro_usd": 100000,
+  "estimated_new_attempt_micro_usd": 1600000,
+  "would_fit_new_attempt_with_existing_reservation": false,
+  "settled_plus_reserved_plus_new_attempt_micro_usd": 3500000,
+  "actions_performed": [
+    "read_local_contract_and_records",
+    "validate_original_operation_identifiers",
+    "calculate_budget_with_outstanding_reservation",
+    "write_local_recovery_evidence"
+  ],
+  "external_calls_performed": 0,
+  "new_submissions_performed": 0,
+  "financial_records_modified": false,
+  "original_records_sha256": {
+    "REQUEST.md": "9623914bb1a80e0195290e4c5dbe0837ef779c0d3f0f5bf6e1c1dbbf811d90a8",
+    "PROVIDER.md": "634cb1eb734279e2b8dd1eae9c57d781faafaefb84dc93b727d5fbb7fa975b70",
+    "budget.json": "85065c38f78a0061435d0a117dd977ad9244adc264f9bc16e750097174850394",
+    "provider-status.json": "758318347f086e17d1436dfb31be7ea69940b68b9d56ef44146b6bd657a976da",
+    "operation-journal.jsonl": "54de3a30550669d4a44a389ff818364d9e7ce079ed462181499361039649b1c0"
+  },
+  "remaining_acceptance": [
+    "read_original_request_status_when_authorized_and_available",
+    "obtain_and_validate_original_document_output_if_completed",
+    "reconcile_actual_charge_and_existing_reservation_from_provider_evidence"
+  ]
+}

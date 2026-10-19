@@ -1,0 +1,7 @@
+{
+  "currency": "USD",
+  "operation_limit_micro_usd": 2000000,
+  "settled_micro_usd": 300000,
+  "reserved_micro_usd": 1600000,
+  "estimated_new_attempt_micro_usd": 1600000
+}

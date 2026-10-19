@@ -1,0 +1,12 @@
+test_customer_download_round_trip (test_orders.ExportTests.test_customer_download_round_trip) ... ok
+test_empty_export_has_header (test_orders.ExportTests.test_empty_export_has_header) ... ok
+test_missing_fields_and_existing_value_conversion (test_orders.ExportTests.test_missing_fields_and_existing_value_conversion) ... ok
+test_plain_order (test_orders.ExportTests.test_plain_order) ... ok
+test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+
+Exit code: 0

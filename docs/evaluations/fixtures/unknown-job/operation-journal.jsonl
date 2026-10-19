@@ -1,0 +1,3 @@
+{"time":"2030-04-12T10:00:00Z","operation_id":"enrich-example-17","event":"reservation_created","amount_micro_usd":1600000}
+{"time":"2030-04-12T10:00:01Z","operation_id":"enrich-example-17","event":"provider_accepted","request_id":"provider-example-62","idempotency_key":"enrich-example-17-attempt-1"}
+{"time":"2030-04-12T10:00:31Z","operation_id":"enrich-example-17","event":"http_timeout","outcome":"unknown"}

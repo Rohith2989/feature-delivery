@@ -1,0 +1,8 @@
+{
+  "source": "release-candidate-b",
+  "observed_at": "2030-04-12T10:00:00Z",
+  "ready": false,
+  "pending_migrations": ["014_export_cursor"],
+  "backup": {"verified": false, "reason": "Provider backup status unavailable"},
+  "deployment_identity": null
+}

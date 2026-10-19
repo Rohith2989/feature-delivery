@@ -1,0 +1,14 @@
+{
+  "python": "3.12.9",
+  "command": "python3 -I evidence/verify_download.py",
+  "result": "PASS",
+  "orders_verified": 2,
+  "assertion": "All parsed fields equal original customer data exactly; IDs stringify.",
+  "sha256": {
+    "orders.py": "f39b97e012f9872e65b3ebd81d9915c428d84da20758c76e2de70c821649ee10",
+    "test_orders.py": "0b7f3bd637d3f642f5d928105854b79e2c6cc1d2f1603d1c394fe30e2fe43964",
+    "customer-example.json": "5c55076f324063b86e3cb7b3306166f0895514d89a61124ee444f9f10c3833e9",
+    "evidence/verify_download.py": "2c20c0c28a281c9b41798d7fe7c6ae259a1fc38e988048699ac1589f518484db",
+    "evidence/customer-orders.csv": "afc45b4bfa7bc3ed8d100ae0091c1d4460000ed2ab7f8f89db9f753f93f2c9d1"
+  }
+}

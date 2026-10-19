@@ -1,0 +1,7 @@
+{
+  "request_id": "provider-example-62",
+  "retrieval": "unavailable",
+  "status": null,
+  "reason": "Status endpoint could not be reached from this fixture",
+  "charged_micro_usd": null
+}

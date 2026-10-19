@@ -1,0 +1,7 @@
+# Retain exact synthetic artifacts: CSV CRLF, captured logs and patch context
+# are meaningful bytes, not source formatting. Do not normalize or trim them.
+docs/evaluations/results/*.diff -text -whitespace
+docs/evaluations/results/csv-guarded-final/changes.diff -text -whitespace
+docs/evaluations/results/csv-guarded-final/evidence/*.csv -text -whitespace
+docs/evaluations/results/csv-guarded-final/evidence/*.txt -text -whitespace
+docs/evaluations/results/outcome-recheck.json -text -whitespace

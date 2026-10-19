@@ -1,0 +1,150 @@
+test_customer_download_round_trip (test_orders.ExportTests.test_customer_download_round_trip) ... FAIL
+test_empty_export_has_header (test_orders.ExportTests.test_empty_export_has_header) ... ok
+test_missing_fields_and_existing_value_conversion (test_orders.ExportTests.test_missing_fields_and_existing_value_conversion) ... ok
+test_plain_order (test_orders.ExportTests.test_plain_order) ... ok
+test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) ... 
+  test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='12 River Lane, Unit 3') ... FAIL
+  test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='Line one\nLine two') ... FAIL
+  test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='Line one\rLine two') ... FAIL
+  test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='Line one\r\nLine two') ... FAIL
+  test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='  École, 東京 🏠\t ') ... FAIL
+
+======================================================================
+FAIL: test_customer_download_round_trip (test_orders.ExportTests.test_customer_download_round_trip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/test_orders.py", line 30, in test_customer_download_round_trip
+    self.assertEqual(rows, [
+AssertionError: Lists differ: [{'or[35 chars] Lane', 'instructions': ' Unit 3', None: ['Ask[169 chars]al'}] != [{'or[35 chars] Lane, Unit 3', 'instructions': 'Ask for "Pat"[103 chars]al'}]
+
+First differing element 0:
+{'ord[34 chars] Lane', 'instructions': ' Unit 3', None: ['Ask for "Pat"']}
+{'ord[34 chars] Lane, Unit 3', 'instructions': 'Ask for "Pat"[16 chars]nce'}
+
+First list contains 1 additional elements.
+First extra element 2:
+{'order_id': '25', 'address': "8 Rue de l'École", 'instructions': 'Call on arrival'}
+
+- [{None: ['Ask for "Pat"'],
+-   'address': '12 River Lane',
+? ^^
+
++ [{'address': '12 River Lane, Unit 3',
+? ^^                         ++++++++
+
+-   'instructions': ' Unit 3',
++   'instructions': 'Ask for "Pat"\nUse side entrance',
+    'order_id': '24'},
+-  {'address': None, 'instructions': None, 'order_id': 'Use side entrance'},
+   {'address': "8 Rue de l'École",
+    'instructions': 'Call on arrival',
+    'order_id': '25'}]
+
+======================================================================
+FAIL: test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='12 River Lane, Unit 3')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/test_orders.py", line 50, in test_special_characters_and_line_endings_survive
+    self.assertEqual(rows, [
+AssertionError: Lists differ: [['or[36 chars] ['1', '12 River Lane', ' Unit 3', '12 River Lane', ' Unit 3']] != [['or[36 chars] ['1', '12 River Lane, Unit 3', '12 River Lane, Unit 3']]
+
+First differing element 1:
+['1', '12 River Lane', ' Unit 3', '12 River Lane', ' Unit 3']
+['1', '12 River Lane, Unit 3', '12 River Lane, Unit 3']
+
+  [['order_id', 'address', 'instructions'],
+-  ['1', '12 River Lane', ' Unit 3', '12 River Lane', ' Unit 3']]
+?                      - --                        - --
+
++  ['1', '12 River Lane, Unit 3', '12 River Lane, Unit 3']]
+
+======================================================================
+FAIL: test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='Line one\nLine two')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/test_orders.py", line 50, in test_special_characters_and_line_endings_survive
+    self.assertEqual(rows, [
+AssertionError: Lists differ: [['or[32 chars]s'], ['1', 'Line one'], ['Line two', 'Line one'], ['Line two']] != [['or[32 chars]s'], ['1', 'Line one\nLine two', 'Line one\nLine two']]
+
+First differing element 1:
+['1', 'Line one']
+['1', 'Line one\nLine two', 'Line one\nLine two']
+
+First list contains 2 additional elements.
+First extra element 2:
+['Line two', 'Line one']
+
+  [['order_id', 'address', 'instructions'],
++  ['1', 'Line one\nLine two', 'Line one\nLine two']]
+-  ['1', 'Line one'],
+-  ['Line two', 'Line one'],
+-  ['Line two']]
+
+======================================================================
+FAIL: test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='Line one\rLine two')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/test_orders.py", line 50, in test_special_characters_and_line_endings_survive
+    self.assertEqual(rows, [
+AssertionError: Lists differ: [['or[32 chars]s'], ['1', 'Line one'], ['Line two', 'Line one'], ['Line two']] != [['or[32 chars]s'], ['1', 'Line one\rLine two', 'Line one\rLine two']]
+
+First differing element 1:
+['1', 'Line one']
+['1', 'Line one\rLine two', 'Line one\rLine two']
+
+First list contains 2 additional elements.
+First extra element 2:
+['Line two', 'Line one']
+
+  [['order_id', 'address', 'instructions'],
++  ['1', 'Line one\rLine two', 'Line one\rLine two']]
+-  ['1', 'Line one'],
+-  ['Line two', 'Line one'],
+-  ['Line two']]
+
+======================================================================
+FAIL: test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='Line one\r\nLine two')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/test_orders.py", line 50, in test_special_characters_and_line_endings_survive
+    self.assertEqual(rows, [
+AssertionError: Lists differ: [['or[32 chars]s'], ['1', 'Line one'], ['Line two', 'Line one'], ['Line two']] != [['or[32 chars]s'], ['1', 'Line one\r\nLine two', 'Line one\r\nLine two']]
+
+First differing element 1:
+['1', 'Line one']
+['1', 'Line one\r\nLine two', 'Line one\r\nLine two']
+
+First list contains 2 additional elements.
+First extra element 2:
+['Line two', 'Line one']
+
+  [['order_id', 'address', 'instructions'],
++  ['1', 'Line one\r\nLine two', 'Line one\r\nLine two']]
+-  ['1', 'Line one'],
+-  ['Line two', 'Line one'],
+-  ['Line two']]
+
+======================================================================
+FAIL: test_special_characters_and_line_endings_survive (test_orders.ExportTests.test_special_characters_and_line_endings_survive) (value='  École, 東京 🏠\t ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/test_orders.py", line 50, in test_special_characters_and_line_endings_survive
+    self.assertEqual(rows, [
+AssertionError: Lists differ: [['or[26 chars]uctions'], ['1', '  École', ' 東京 🏠\t ', '  École', ' 東京 🏠\t ']] != [['or[26 chars]uctions'], ['1', '  École, 東京 🏠\t ', '  École, 東京 🏠\t ']]
+
+First differing element 1:
+['1', '  École', ' 東京 🏠\t ', '  École', ' 東京 🏠\t ']
+['1', '  École, 東京 🏠\t ', '  École, 東京 🏠\t ']
+
+  [['order_id', 'address', 'instructions'],
+-  ['1', '  École', ' 東京 🏠\t ', '  École', ' 東京 🏠\t ']]
+?                - --                   - --
+
++  ['1', '  École, 東京 🏠\t ', '  École, 東京 🏠\t ']]
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (failures=6)
+
+Exit code: 1

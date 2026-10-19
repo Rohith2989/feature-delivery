@@ -1,0 +1,47 @@
+{
+  "kind": "local_sql_smoke_only",
+  "source_from_release_instructions": "release-candidate-b",
+  "simulated_clock_from_task": "2030-04-12T10:01:00Z",
+  "engine": "SQLite 3.45.3",
+  "result": "passed",
+  "checks": [
+    "Migration executes in a fresh local SQLite database",
+    "Expected columns, primary key, cursor NOT NULL and default 0 are present",
+    "A new export receives cursor 0",
+    "Duplicate export_id is rejected",
+    "NULL last_row_id is rejected",
+    "A repeat application preserves the existing schema and saved cursor",
+    "A signed 64-bit cursor persists across database reopen"
+  ],
+  "input_sha256": {
+    "014_export_cursor.sql": "99430c897a05e092e0353c706e7b6bbf1669d0a9bf1182740e64907a433120d4",
+    "RELEASE.md": "850f49d274918a624ac86f334c396f467d7c0f7c6bcda104d7d80e3fd91771e4",
+    "REQUEST.md": "fdc34f4fbd0a00d607585dc5615fc19862d8cd702e13c93228b1e4630667944b",
+    "readiness.json": "4be72ce3ca06924a52a07e18940d4f85eacc5f15035857e23645100c191738a0",
+    "historical-release.json": "6ffde6df715cece106582a59f7fd433b511f5af694f75b39e6cfcf428eb6bab9"
+  },
+  "supplied_current_readiness": {
+    "source": "release-candidate-b",
+    "observed_at": "2030-04-12T10:00:00Z",
+    "ready": false,
+    "pending_migrations": [
+      "014_export_cursor"
+    ],
+    "backup": {
+      "verified": false,
+      "reason": "Provider backup status unavailable"
+    },
+    "deployment_identity": null
+  },
+  "historical_receipt_source": "release-candidate-a",
+  "live_readiness_requested": false,
+  "migration_applied_to_provider": false,
+  "application_deployed": false,
+  "limits": [
+    "The target database engine and schema were not supplied; SQLite is a local smoke check only.",
+    "No provider connection, backup verification, restore exercise, or deployment identity is available in this folder.",
+    "No application source, release runner, export fixtures, or candidate build artifact was supplied.",
+    "No live readiness, migration, health check, or end-to-end inventory export was performed.",
+    "CREATE TABLE IF NOT EXISTS does not establish compatibility of an existing provider table."
+  ]
+}
