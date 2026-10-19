@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-19T14:40:25.932001+00:00",
+  "repository": "https://github.com/Rohith2989/feature-delivery",
+  "public_commit": "ef2243048e8f877175ea1f7b1ee3bb559471cc6b",
+  "anonymous_https_clone_exit": 0,
+  "no_global_git_configuration_or_credential_helper": true,
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit": 0,
+      "tests": 37,
+      "skipped": 0,
+      "tail": "ed) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 0.121s\n\nOK"
+    },
+    {
+      "command": "python3 tools/check_package.py",
+      "exit": 0,
+      "output": "Package metadata and local Markdown links checked; no network/host compatibility claim."
+    },
+    {
+      "command": "python3 -B docs/evaluations/results/verify.py",
+      "exit": 0,
+      "curated_outcome_checks": 8
+    }
+  ],
+  "installed_copy_files_verified": 8,
+  "installed_cli_help_exit": 0,
+  "public_raw_skill_HTTP": 200,
+  "skill_sha256": "70f1df00b291117c46c02f82629a403bfa4e0d7612d07a715947da5c38741b43",
+  "platform": "macOS-26.2-arm64-arm-64bit",
+  "python": "3.12.9",
+  "scope": "Fresh public clone, isolated folder copy and local execution; not actual host discovery, marketplace approval or production feature delivery."
+}

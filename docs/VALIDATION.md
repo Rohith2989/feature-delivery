@@ -81,6 +81,18 @@ dependency for engineers installing this skill.
 
 ## Publication boundary
 
+A fresh public HTTPS clone of commit
+`ef2243048e8f877175ea1f7b1ee3bb559471cc6b` succeeded without a configured Git
+credential helper or global/system Git configuration. From that checkout, all
+37 helper tests, package checks and 8 curated outcome rechecks passed. A copy of
+the skill into an isolated consumer skill directory retained all 8 source files
+byte-for-byte; its CLI help ran successfully. The immutable public raw skill URL
+returned HTTP 200 with the expected entrypoint hash. See the
+[publication check](publication-check.json) for the actual commit and scope.
+This tested public retrieval, folder copying and local execution, not host skill
+discovery or marketplace installation. Later documentation-only commits do not
+change the entrypoint or helper tested at that revision.
+
 Only original generic instructions, the small offline helper, synthetic fixtures,
 curated synthetic results and packaging material belong in this repository. Private
 operational history, customer data, credentials, browser sessions and internal tool
