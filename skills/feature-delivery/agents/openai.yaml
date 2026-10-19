@@ -1,0 +1,4 @@
+interface:
+  display_name: "Feature Delivery"
+  short_description: "Own a feature through verified delivery"
+  default_prompt: "Use $feature-delivery to implement this feature, verify the relevant real workflows, and finish within the project’s release and access boundaries."

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "feature-delivery",
+  "version": "0.1.0",
+  "description": "Own software features from investigation through implementation, authorized release, and verified user workflows."
+}
